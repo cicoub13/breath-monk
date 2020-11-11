@@ -17,6 +17,7 @@
     <title>Breath Monk</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="manifest" href = "/manifest.json">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
   <section class="section">
@@ -38,13 +39,20 @@
                 Temps : <input type="number" id="quantity" name="quantity" class="input" min="1" max="30" value="5"> 
             </div>
         </div>
-        <button id="start" onclick="countDown()">Démarrer</button>
-        <button id="pause" onclick="pause()" style="visibility:hidden">Pause</button>
-        <button id="play" onclick="play()" style="visibility:hidden">Reprendre</button>
-        <button id="reset" onclick="reset()" style="visibility:hidden">Redémarrer</button>
-        <progress id="progress" class="progress is-primary" value="100" max="100">15%</progress>
+        <div class="buttons"></div>
+            <button id="start" class="button is-success" onclick="countDown()">Démarrer</button>
+            <button id="pause" class="button is-warning" onclick="pause()" style="visibility:hidden">Pause</button>
+            <button id="play" class="button is-success" onclick="play()" style="visibility:hidden">Reprendre</button>
+            <button id="reset" class="button is-danger" onclick="reset()" style="visibility:hidden">Redémarrer</button>
+        </div>
+        <div class="mt-2">
+            <progress id="progress" class="progress is-primary" value="100" max="100">15%</progress>
+        </div>
         <div id="countdown"></div>
         <div id="instruction"></div>
+        <div id="visual">
+
+        </div>
       </p>
     </div>
   </section>

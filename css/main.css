@@ -1,0 +1,21 @@
+#visual {
+    border-radius: 50%;
+    height: 40px;
+    margin: 50px auto;
+    width: 40px;
+    transition: transform 5s linear;
+}
+
+.bigger {
+    transform: scale(3);
+    background: #46BAAF;
+}
+
+.smaller {
+    transform: scale(1);
+    background: #46BAAF;
+}
+
+.hold {
+    background: #e4651b;
+}
