@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="white"/>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />  
+    <link rel="apple-touch-icon" href="images/hello-icon-152.png">   
+    <meta name="theme-color" content="white"/>  
+    <meta name="apple-mobile-web-app-capable" content="yes">  
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+    <meta name="apple-mobile-web-app-title" content="Hello World"> 
+    <meta name="msapplication-TileImage" content="images/hello-icon-144.png">  
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+
+    <title>Breathing</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="manifest" href = "/manifest.json">
+  </head>
+  <body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        Breathing
+      </h1>
+      <p class="subtitle">
+        <div id="configuration">
+            Respiration : 
+            <div class="select">
+                <select id="breathingType">
+                  <option value="SYMETRIC">Symétrique</option>
+                  <option value="TRIANGLE">Triangulaire</option>
+                  <option value="SQUARE">Carrée</option>
+                </select>
+            </div>
+            <div>
+                Temps : <input type="number" id="quantity" name="quantity" class="input" min="1" max="30" value="5"> 
+            </div>
+        </div>
+        <button id="start" onclick="countDown()">Démarrer</button>
+        <button id="pause" onclick="pause()" style="visibility:hidden">Pause</button>
+        <button id="play" onclick="play()" style="visibility:hidden">Reprendre</button>
+        <button id="reset" onclick="reset()" style="visibility:hidden">Redémarrer</button>
+        <progress id="progress" class="progress is-primary" value="100" max="100">15%</progress>
+        <div id="countdown"></div>
+        <div id="instruction"></div>
+      </p>
+    </div>
+  </section>
+  <script src="js/main.js"></script>
+  <script src="js/pwa.js"></script>
+  </body>
+</html>
