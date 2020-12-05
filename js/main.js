@@ -96,7 +96,7 @@ function countDown() {
     const minutes = document.getElementById("quantity").value;
     const breathingType = document.getElementById("breathingType").value;
     document.getElementById("pause").style.visibility = "visible";
-    document.getElementById("start").style.visibility = "hidden";
+    document.getElementById("start").style.display = "none";
     document.getElementById("configuration").style.visibility = "hidden";
 
     let remainingTime = minutes * 60;
